@@ -1,0 +1,30 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), hid=(), identity-credentials-get=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), usb=(), web-share=(self), xr-spatial-tracking=()
+  Strict-Transport-Security: max-age=31536000
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/about.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/contact.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/css/*
+  Cache-Control: public, max-age=604800
+
+/js/*
+  Cache-Control: public, max-age=604800
+
+/images/*
+  Cache-Control: public, max-age=604800
+
+/fonts/*
+  Cache-Control: public, max-age=604800
+
+/favicon.ico
+  Cache-Control: public, max-age=604800
