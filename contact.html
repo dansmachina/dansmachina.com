@@ -47,7 +47,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=optional"
       rel="stylesheet"
       media="print"
       onload="
@@ -101,8 +101,20 @@
       <!-- Header -->
       <header>
         <div class="head-top">
-          <a href="#" class="menu-btn"><span></span></a>
-          <div class="top-menu">
+          <button
+            type="button"
+            class="menu-btn"
+            aria-label="Toggle navigation menu"
+            aria-controls="site-navigation"
+            aria-expanded="false"
+          >
+            <span></span>
+          </button>
+          <div
+            class="top-menu"
+            id="site-navigation"
+            aria-label="Primary navigation"
+          >
             <ul>
               <li><a href="index.html" class="lnk">Home</a></li>
               <li><a href="about.html" class="lnk">About</a></li>
@@ -115,7 +127,7 @@
       </header>
 
       <!-- Wrapper -->
-      <div class="wrapper">
+      <main class="wrapper" id="main-content">
         <!-- Started -->
         <div class="section started">
           <div class="centrize full-width">
@@ -135,9 +147,21 @@
               </div>
             </div>
           </div>
-          <a href="#" class="mouse_btn"
-            ><ion-icon name="chevron-down-outline"></ion-icon
-          ></a>
+          <a href="#" class="mouse_btn" aria-label="Scroll to content">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon-svg"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </a>
         </div>
 
         <!-- Contact Info -->
@@ -149,7 +173,20 @@
             <div class="service-items">
               <div class="service-item">
                 <div class="icon">
-                  <ion-icon name="paper-plane-outline"></ion-icon>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon-svg"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 2 11 13"></path>
+                    <path d="M22 2 15 22l-4-9-9-4Z"></path>
+                  </svg>
                 </div>
                 <div class="name">Email</div>
                 <p>
@@ -158,7 +195,17 @@
               </div>
               <div class="service-item">
                 <div class="icon">
-                  <ion-icon name="logo-linkedin"></ion-icon>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon-svg"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.97 1.97 0 1 0 5.3 6.94 1.97 1.97 0 0 0 5.25 3ZM20.44 12.68c0-3.46-1.85-5.07-4.32-5.07-1.99 0-2.88 1.09-3.38 1.86V8.5H9.36c.04.64 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.13-.92.27-.68.9-1.39 1.95-1.39 1.38 0 1.93 1.05 1.93 2.59V20h3.38v-7.32Z"
+                    ></path>
+                  </svg>
                 </div>
                 <div class="name">LinkedIn</div>
                 <p>
@@ -169,7 +216,22 @@
               </div>
               <div class="service-item">
                 <div class="icon">
-                  <ion-icon name="location-outline"></ion-icon>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon-svg"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 21s-6-4.35-6-10a6 6 0 1 1 12 0c0 5.65-6 10-6 10Z"
+                    ></path>
+                    <circle cx="12" cy="11" r="2.5"></circle>
+                  </svg>
                 </div>
                 <div class="name">Location</div>
                 <p>København, Danmark</p>
@@ -177,17 +239,47 @@
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
       <!-- Footer -->
       <footer>
         <div class="soc">
-          <a target="_blank" href="https://linkedin.com/in/algp"
-            ><ion-icon name="logo-linkedin"></ion-icon
-          ></a>
-          <a target="_blank" href="https://github.com/dansmachina"
-            ><ion-icon name="logo-github"></ion-icon
-          ></a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+            href="https://linkedin.com/in/algp"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon-svg"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="currentColor"
+            >
+              <path
+                d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.97 1.97 0 1 0 5.3 6.94 1.97 1.97 0 0 0 5.25 3ZM20.44 12.68c0-3.46-1.85-5.07-4.32-5.07-1.99 0-2.88 1.09-3.38 1.86V8.5H9.36c.04.64 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.13-.92.27-.68.9-1.39 1.95-1.39 1.38 0 1.93 1.05 1.93 2.59V20h3.38v-7.32Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+            href="https://github.com/dansmachina"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon-svg"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.22-3.37-1.22-.46-1.2-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .08 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.15-4.56-5.1 0-1.13.39-2.06 1.03-2.79-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.06A9.3 9.3 0 0 1 12 7.09c.85 0 1.7.12 2.5.36 1.9-1.34 2.74-1.06 2.74-1.06.56 1.42.21 2.47.1 2.73.64.73 1.03 1.66 1.03 2.79 0 3.96-2.34 4.84-4.57 5.1.36.32.68.95.68 1.92 0 1.38-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.25C22 6.59 17.52 2 12 2Z"
+              ></path>
+            </svg>
+          </a>
         </div>
         <div class="clr"></div>
       </footer>
@@ -201,13 +293,5 @@
 
     <!-- Scripts -->
     <script src="js/glitche-scripts.js" defer></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>

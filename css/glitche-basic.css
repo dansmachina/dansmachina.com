@@ -35,7 +35,9 @@ body {
   margin: 0;
   padding: 0;
   border: none;
-  font-family: "Roboto Mono";
+  font-family:
+    "Roboto Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+    monospace;
   font-size: 13px;
   color: #363636;
   /*background: #ffffff;*/
@@ -294,13 +296,21 @@ a.btn:hover,
   font-size: 12px;
 }
 
+.typed-cursor {
+  display: inline-block;
+  width: 1ch;
+  text-align: left;
+}
+
 /* 8. Forms */
 input,
 textarea,
 button {
   display: block;
   background: none;
-  font-family: "Roboto Mono";
+  font-family:
+    "Roboto Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+    monospace;
   font-size: 12px;
   height: 60px;
   width: 100%;
@@ -560,7 +570,9 @@ td {
 
 /* 14. Blockquote */
 blockquote {
-  font-family: "Roboto Mono";
+  font-family:
+    "Roboto Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+    monospace;
 }
 
 /* Animations */

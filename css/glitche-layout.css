@@ -257,23 +257,40 @@ header .head-top .top-menu ul li.active .btn {
   padding: 0;
   margin: 0;
   position: relative;
+  height: calc(100svh - 60px);
+  min-height: calc(100svh - 60px);
+  overflow: hidden;
+}
+
+@media (max-width: 840px) {
+  .section.started {
+    height: calc(100svh - 30px);
+    min-height: calc(100svh - 30px);
+  }
 }
 
 .section.started .started-content {
   display: inline-block;
-  vertical-align: middle;
+  width: min(100%, 42rem);
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
   text-align: center;
   position: relative;
 }
 
 .section.started .started-content .h-title {
   font-size: 68px;
-  font-family: "Roboto Mono";
+  font-family:
+    "Roboto Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+    monospace;
   color: #141414;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin: 10px 0 5px 0;
+  min-height: 1.3em;
 }
 
 @media (max-width: 1060px) {
@@ -311,11 +328,15 @@ header .head-top .top-menu ul li.active .btn {
 
 .section.started .started-content .h-subtitle {
   font-size: 13px;
+  min-height: 1.8em;
 }
 
 .section.started .started-content .typed-subtitle,
 .section.started .started-content .typed-bread {
   font-size: 13px;
+  display: inline-block;
+  min-height: 1.8em;
+  max-width: 100%;
 }
 
 .section.started .mouse_btn {
@@ -333,6 +354,16 @@ header .head-top .top-menu ul li.active .btn {
 .section.started .mouse_btn .ion {
   position: relative;
   top: 0px;
+  animation: mouse-anim 1s ease-out 0s infinite;
+}
+
+.section.started .mouse_btn .icon-svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
   animation: mouse-anim 1s ease-out 0s infinite;
 }
 
@@ -620,6 +651,13 @@ header .head-top .top-menu ul li.active .btn {
 
 .service-items .service-item .icon .ion {
   display: block;
+}
+
+.service-items .service-item .icon .icon-svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin: 0 auto;
 }
 
 .service-items .service-item .name {
@@ -940,7 +978,21 @@ footer .soc a .ion {
   -o-transition: all 0.3s ease 0s;
 }
 
+footer .soc a .icon-svg {
+  width: 17px;
+  height: 17px;
+  color: #363636;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+
 footer .soc a:hover .ion {
+  color: #000;
+}
+
+footer .soc a:hover .icon-svg {
   color: #000;
 }
 
@@ -1107,6 +1159,11 @@ footer {
   color: #141414;
   box-shadow: none;
   font-size: 24px;
+}
+
+.section.contacts .service-items .service-item .icon .icon-svg {
+  width: 24px;
+  height: 24px;
 }
 
 .section.contacts .service-items .service-item .name {

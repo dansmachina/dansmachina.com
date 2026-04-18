@@ -3,7 +3,6 @@
 
 	var body = document.body;
 	var header = document.querySelector('header');
-	var startedSection = document.querySelector('.section.started');
 	var mouseButton = document.querySelector('.mouse_btn');
 
 	function collectTypedStrings(source) {
@@ -93,14 +92,6 @@
 		renderString();
 	}
 
-	function setStartedHeight() {
-		if (!startedSection) {
-			return;
-		}
-
-		startedSection.style.height = (window.innerWidth < 840 ? window.innerHeight - 30 : window.innerHeight - 60) + 'px';
-	}
-
 	function initTypedText() {
 		startTypewriter(
 			document.querySelector('.typed-subtitle'),
@@ -131,6 +122,7 @@
 		if (menuButton && header) {
 			event.preventDefault();
 			header.classList.toggle('active');
+			menuButton.setAttribute('aria-expanded', header.classList.contains('active') ? 'true' : 'false');
 			return;
 		}
 
@@ -181,11 +173,9 @@
 	}
 
 	function init() {
-		setStartedHeight();
 		initTypedText();
 		updateMouseButton();
 
-		window.addEventListener('resize', setStartedHeight);
 		window.addEventListener('scroll', updateMouseButton);
 
 		document.addEventListener('click', handleDelegatedClicks);

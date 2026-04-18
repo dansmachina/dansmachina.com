@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /cdn-cgi/
+
+Host: https://dansmachina.com
+Sitemap: https://dansmachina.com/sitemap.xml
