@@ -3,7 +3,6 @@
 
 	var body = document.body;
 	var header = document.querySelector('header');
-	var preloader = document.querySelector('.preloader');
 	var startedSection = document.querySelector('.section.started');
 	var mouseButton = document.querySelector('.mouse_btn');
 
@@ -104,12 +103,6 @@
 
 	function initTypedText() {
 		startTypewriter(
-			document.querySelector('.typed-load'),
-			document.querySelector('.typing-load'),
-			{ loop: true }
-		);
-
-		startTypewriter(
 			document.querySelector('.typed-subtitle'),
 			document.querySelector('.typing-subtitle'),
 			{ loop: true }
@@ -130,25 +123,6 @@
 		mouseButton.style.display = window.scrollY >= 1 ? 'none' : 'block';
 	}
 
-	function fadeOutElement(element, duration, callback) {
-		if (!element) {
-			if (callback) {
-				callback();
-			}
-			return;
-		}
-
-		element.style.transition = 'opacity ' + duration + 'ms ease';
-		element.style.opacity = '0';
-
-		window.setTimeout(function () {
-			element.style.display = 'none';
-			if (callback) {
-				callback();
-			}
-		}, duration);
-	}
-
 	function handleDelegatedClicks(event) {
 		var link = event.target.closest('header .top-menu a, .typed-bread a');
 		var menuButton = event.target.closest('header .menu-btn');
@@ -157,7 +131,6 @@
 		if (menuButton && header) {
 			event.preventDefault();
 			header.classList.toggle('active');
-			body.classList.toggle('loaded', !header.classList.contains('active'));
 			return;
 		}
 
@@ -180,7 +153,6 @@
 		}
 
 		event.preventDefault();
-		body.classList.remove('loaded');
 		window.setTimeout(function () {
 			window.location.href = link.getAttribute('href');
 		}, 250);
@@ -215,15 +187,6 @@
 
 		window.addEventListener('resize', setStartedHeight);
 		window.addEventListener('scroll', updateMouseButton);
-		window.addEventListener('load', function () {
-			var preloaderInner = document.querySelector('.preloader .pre-inner');
-
-			fadeOutElement(preloaderInner, 800, function () {
-				fadeOutElement(preloader, 300);
-				body.classList.add('loaded');
-				updateMouseButton();
-			});
-		});
 
 		document.addEventListener('click', handleDelegatedClicks);
 		document.addEventListener('mouseover', handleButtonHover);
