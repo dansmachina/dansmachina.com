@@ -1,0 +1,21 @@
+{
+  "name": "Alejandro Gonzalez",
+  "short_name": "AGP",
+  "description": "Personal site of Alejandro Gonzalez, Head of Software Engineering at Novonesis.",
+  "icons": [
+    {
+      "src": "/images/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#101418",
+  "background_color": "#101418",
+  "display": "standalone",
+  "start_url": "/"
+}
