@@ -568,6 +568,10 @@ td {
   font-style: italic !important;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 /* 14. Blockquote */
 blockquote {
   font-family:

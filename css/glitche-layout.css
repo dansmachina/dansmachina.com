@@ -98,6 +98,7 @@ header .head-top {
 }
 
 header .head-top .menu-btn {
+  display: none;
   position: relative;
   margin: 0 auto;
   width: 26px;
